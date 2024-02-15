@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background: #000000;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card {
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: #2c3a47;
+    padding: 60px 40px;
+}
+
+.pic {
+    display: inline-block;
+    padding: 5px;
+    background: linear-gradient(130deg, #74b9ff, #e66767);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient {
+    25% {
+        background-position: left bottom;
+    }
+    50% {
+        background-position: right bottom;
+    }
+    75% {
+        background-position: right top;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+
+.pic img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.name {
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 18px;
+    color: #e66767;
+}
+
+.sm {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.sm a {
+    color: #f2f2f2;
+    width: 56px;
+    font-size: 22px;
+    transition: .3s linear;
+}
+
+.sm a:hover {
+    color: #00cde8;
+}
+
+#myLink {
+    display: inline-block;
+    padding: 12px 50px;
+    color: #fff;
+    border: 2px solid #004965;
+    border-radius: 6px;
+    margin-top: 7px;
+    transition: .3s linear;
+}
+
+#myLink:hover {
+    background: #004965;
+    color: #f2f2f2;
+}
+
+.card-footer {
+    background: #f4f4f4;
+    padding: 60px 10px;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #e66767;
+}
+
+.item span {
+    display: block;
+    color: #2c3a47;
+    font-size: 30px;
+}
+
+.border {
+    width: 1px;
+    height: 30px;
+    background: #bbb;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .profile-card {
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+
+    .card-header {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .pic img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .sm a {
+        width: 40px;
+        font-size: 18px;
+    }
+
+    #myLink {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .card-footer {
+        padding: 40px 10px;
+    }
+
+    .item {
+        font-size: 12px;
+    }
+
+    .item span {
+        font-size: 24px;
+    }
+
+    .border {
+        height: 20px;
+    }
+}
